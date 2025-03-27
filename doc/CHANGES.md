@@ -2,6 +2,7 @@
 
 ## Highlighted Features
 
+* Add experimental request insights feature (Graeme Porteous)
 * Add report link to user profile pages (Gareth Rees)
 * Only list users who have made requests in search (Gareth Rees)
 * Collect cancellation reasons when Pro users cancel their subscriptions (Graeme
@@ -29,6 +30,12 @@ in the rails console:
       users.each(&:xapian_mark_needs_index)
       sleep(360) # Throttle the reindexing
     end
+
+* _Note:_ This release introduces an experimental request insights feature that
+enables administrators to analyse outgoing requests using a Large Language Model
+(LLM) via Ollama integration. Currently, this admin-only feature processes data
+in the backend only. To enable this functionality, you'll need to set up Ollama
+on your infrastructure and configure the `OLLAMA_URL` environment variable.
 
 # 0.45.3.1
 
